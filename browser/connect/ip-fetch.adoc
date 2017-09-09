@@ -1,0 +1,62 @@
+== DNS 查询
+
+* 浏览器检查域名是否在缓存当中（要查看 Chrome 当中的缓存， 打开 `chrome://net-internals/#dns`）。
+* 如果缓存中没有，就去调用 `gethostbyname` 库函数（操作系统不同函数也不同）进行查询。
+* `gethostbyname` 函数在试图进行DNS解析之前首先检查域名是否在本地 Hosts 里，Hosts 的位置 [不同的操作系统有所不同](https://en.wikipedia.org/wiki/Hosts_%28file%29#Location_in_the_file_system)
+* 如果 `gethostbyname` 没有这个域名的缓存记录，也没有在 `hosts` 里找到，它将会向 DNS 服务器发送一条 DNS 查询请求。DNS 服务器是由网络通信栈提供的，通常是本地路由器或者 ISP 的缓存 DNS 服务器。
+
+* 查询本地 DNS 服务器
+* 如果 DNS 服务器和我们的主机在同一个子网内，系统会按照下面的 ARP 过程对 DNS 服务器进行 ARP查询
+* 如果 DNS 服务器和我们的主机在不同的子网，系统会按照下面的 ARP 过程对默认网关进行查询
+
+== ARP 过程
+
+要想发送 ARP（地址解析协议）广播，我们需要有一个目标 IP 地址，同时还需要知道用于发送 ARP 广播的接口的 MAC 地址。
+
+* 首先查询 ARP 缓存，如果缓存命中，我们返回结果：目标 IP = MAC
+
+如果缓存没有命中：
+
+
+* 查看路由表，看看目标 IP 地址是不是在本地路由表中的某个子网内。是的话，使用跟那个子网相连的接口，否则使用与默认网关相连的接口。
+* 查询选择的网络接口的 MAC 地址
+* 我们发送一个二层（ [OSI 模型](https://en.wikipedia.org/wiki/OSI_model) 中的数据链路层）ARP 请求：
+
+`ARP Request:`
+
+----
+    Sender MAC: interface:mac:address:here
+    Sender IP: interface.ip.goes.here
+    Target MAC: FF:FF:FF:FF:FF:FF (Broadcast)
+    Target IP: target.ip.goes.here
+----
+
+根据连接主机和路由器的硬件类型不同，可以分为以下几种情况：
+
+直连：
+
+* 如果我们和路由器是直接连接的，路由器会返回一个 `ARP Reply` （见下面）。
+
+集线器：
+
+* 如果我们连接到一个集线器，集线器会把 ARP 请求向所有其它端口广播，如果路由器也“连接”在其中，它会返回一个 `ARP Reply` 。
+
+交换机：
+
+* 如果我们连接到了一个交换机，交换机会检查本地 CAM/MAC 表，看看哪个端口有我们要找的那个 MAC 地址，如果没有找到，交换机会向所有其它端口广播这个 ARP 请求。
+* 如果交换机的 MAC/CAM 表中有对应的条目，交换机会向有我们想要查询的 MAC 地址的那个端口发送 ARP 请求
+* 如果路由器也“连接”在其中，它会返回一个 `ARP Reply`
+
+
+`ARP Reply`::
+
+    Sender MAC: target:mac:address:here
+    Sender IP: target.ip.goes.here
+    Target MAC: interface:mac:address:here
+    Target IP: interface.ip.goes.here
+
+
+现在我们有了 DNS 服务器或者默认网关的 IP 地址，我们可以继续 DNS 请求了：
+
+* 使用 53 端口向 DNS 服务器发送 UDP 请求包，如果响应包太大，会使用 TCP 协议
+* 如果本地/ISP DNS 服务器没有找到结果，它会发送一个递归查询请求，一层一层向高层 DNS 服务器做查询，直到查询到起始授权机构，如果找到会把结果返回
