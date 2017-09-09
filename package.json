@@ -1,0 +1,23 @@
+{
+  "name": "what-happens-when-you-enter-url-in-browser",
+  "version": "1.0.0",
+  "description": "What happens when you enter URL in browser",
+  "main": "index.js",
+  "scripts": {
+    "build": "gitbook build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincenthou/what-happens-when-you-enter-url-in-browser.git"
+  },
+  "author": "Vincent Hou",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/vincenthou/what-happens-when-you-enter-url-in-browser/issues"
+  },
+  "homepage": "https://github.com/vincenthou/what-happens-when-you-enter-url-in-browser#readme",
+  "dependencies": {
+    "gitbook": "^3.2.3",
+    "gitbook-cli": "^2.3.2"
+  }
+}
