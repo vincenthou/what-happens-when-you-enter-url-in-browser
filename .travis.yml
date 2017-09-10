@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+- '7.7.4'
+env:
+  global:
+  - PATH: node_modules/.bin/:$PATH
+install:
+- npm install
+cache:
+  directories:
+  - node_modules
+script:
+- npm run build
+deploy:
+  provider: pages
+  local_dir: _book
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+branches:
+  only:
+  - master

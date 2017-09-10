@@ -1,0 +1,494 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>web服务器 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../browser/render/structure.html" />
+    
+    
+    <link rel="prev" href="../browser/connect/http.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">硬件</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../hardware/keyboard.html">
+            
+                <a href="../hardware/keyboard.html">
+            
+                    
+                    硬件中断
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">操作系统</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../os/event.html">
+            
+                <a href="../os/event.html">
+            
+                    
+                    系统事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">浏览器请求</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../browser/connect/parse-url.html">
+            
+                <a href="../browser/connect/parse-url.html">
+            
+                    
+                    解析地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../browser/connect/protocol.html">
+            
+                <a href="../browser/connect/protocol.html">
+            
+                    
+                    协议判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../browser/connect/ip-fetch.html">
+            
+                <a href="../browser/connect/ip-fetch.html">
+            
+                    
+                    IP获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../browser/connect/https.html">
+            
+                <a href="../browser/connect/https.html">
+            
+                    
+                    TLS握手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../browser/connect/http.html">
+            
+                <a href="../browser/connect/http.html">
+            
+                    
+                    HTTP请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">服务器响应</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="webserver.html">
+            
+                <a href="webserver.html">
+            
+                    
+                    web服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">浏览器渲染</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../browser/render/structure.html">
+            
+                <a href="../browser/render/structure.html">
+            
+                    
+                    浏览器结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../browser/render/flow.html">
+            
+                <a href="../browser/render/flow.html">
+            
+                    
+                    渲染流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../browser/render/html-parse.html">
+            
+                <a href="../browser/render/html-parse.html">
+            
+                    
+                    HTML解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../browser/render/css-parse.html">
+            
+                <a href="../browser/render/css-parse.html">
+            
+                    
+                    CSS解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../browser/render/gpu.html">
+            
+                <a href="../browser/render/gpu.html">
+            
+                    
+                    GPU渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../browser/render/rerender.html">
+            
+                <a href="../browser/render/rerender.html">
+            
+                    
+                    重新渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >web服务器</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="sect1">
+<h2 id="_http">HTTP &#x670D;&#x52A1;&#x5668;&#x8BF7;&#x6C42;&#x5904;&#x7406;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>HTTPD(HTTP Daemon)&#x5728;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x5904;&#x7406;&#x8BF7;&#x6C42;/&#x54CD;&#x5E94;&#x3002;&#x6700;&#x5E38;&#x89C1;&#x7684; HTTPD &#x6709; Linux &#x4E0A;&#x5E38;&#x7528;&#x7684; Apache &#x548C; nginx&#xFF0C;&#x4EE5;&#x53CA; Windows &#x4E0A;&#x7684; IIS&#x3002;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>HTTPD &#x63A5;&#x6536;&#x8BF7;&#x6C42;</p>
+</li>
+<li>
+<p>&#x670D;&#x52A1;&#x5668;&#x628A;&#x8BF7;&#x6C42;&#x62C6;&#x5206;&#x4E3A;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+</li>
+<li>
+<p>HTTP &#x8BF7;&#x6C42;&#x65B9;&#x6CD5;(<code>GET</code>, <code>POST</code>, <code>HEAD</code>, <code>PUT</code>, <code>DELETE</code>, <code>CONNECT</code>, <code>OPTIONS</code>, &#x6216;&#x8005; <code>TRACE</code>)&#x3002;&#x76F4;&#x63A5;&#x5728;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x8F93;&#x5165; URL &#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F; GET &#x65B9;&#x6CD5;</p>
+</li>
+<li>
+<p>&#x57DF;&#x540D;&#xFF1A;google.com</p>
+</li>
+<li>
+<p>&#x8BF7;&#x6C42;&#x8DEF;&#x5F84;/&#x9875;&#x9762;&#xFF1A;/  (&#x6211;&#x4EEC;&#x6CA1;&#x6709;&#x8BF7;&#x6C42;google.com&#x4E0B;&#x7684;&#x6307;&#x5B9A;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x56E0;&#x6B64; / &#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x8DEF;&#x5F84;)</p>
+</li>
+<li>
+<p>&#x670D;&#x52A1;&#x5668;&#x9A8C;&#x8BC1;&#x5176;&#x4E0A;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x4E86; google.com &#x7684;&#x865A;&#x62DF;&#x4E3B;&#x673A;</p>
+</li>
+<li>
+<p>&#x670D;&#x52A1;&#x5668;&#x9A8C;&#x8BC1; google.com &#x63A5;&#x53D7; GET &#x65B9;&#x6CD5;</p>
+</li>
+<li>
+<p>&#x670D;&#x52A1;&#x5668;&#x9A8C;&#x8BC1;&#x8BE5;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; GET &#x65B9;&#x6CD5;(&#x6839;&#x636E; IP &#x5730;&#x5740;&#xFF0C;&#x8EAB;&#x4EFD;&#x4FE1;&#x606F;&#x7B49;)</p>
+</li>
+<li>
+<p>&#x5982;&#x679C;&#x670D;&#x52A1;&#x5668;&#x5B89;&#x88C5;&#x4E86; URL &#x91CD;&#x5199;&#x6A21;&#x5757;&#xFF08;&#x4F8B;&#x5982; Apache &#x7684; mod_rewrite &#x548C; IIS &#x7684; URL Rewrite&#xFF09;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x5C1D;&#x8BD5;&#x5339;&#x914D;&#x91CD;&#x5199;&#x89C4;&#x5219;&#xFF0C;&#x5982;&#x679C;&#x5339;&#x914D;&#x4E0A;&#x7684;&#x8BDD;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x6309;&#x7167;&#x89C4;&#x5219;&#x91CD;&#x5199;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;</p>
+</li>
+<li>
+<p>&#x670D;&#x52A1;&#x5668;&#x6839;&#x636E;&#x8BF7;&#x6C42;&#x4FE1;&#x606F;&#x83B7;&#x53D6;&#x76F8;&#x5E94;&#x7684;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x7531;&#x4E8E;&#x8BBF;&#x95EE;&#x8DEF;&#x5F84;&#x662F; &quot;/&quot; ,&#x4F1A;&#x8BBF;&#x95EE;&#x9996;&#x9875;&#x6587;&#x4EF6;&#xFF08;&#x4F60;&#x53EF;&#x4EE5;&#x91CD;&#x5199;&#x8FD9;&#x4E2A;&#x89C4;&#x5219;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;&#xFF09;&#x3002;</p>
+</li>
+<li>
+<p>&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x4F7F;&#x7528;&#x6307;&#x5B9A;&#x7684;&#x5904;&#x7406;&#x7A0B;&#x5E8F;&#x5206;&#x6790;&#x5904;&#x7406;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x5047;&#x5982; Google &#x4F7F;&#x7528; <a href="../GLOSSARY.html#php" class="glossary-term" title="A popular web programming language, used by many large websites such
+as Facebook. Rasmus Lerdorf originally created PHP in 1994 to power
+his personal homepage (PHP originally stood for &quot;Personal Home Page&quot;
+but now stands for &quot;PHP: Hypertext Preprocessor&quot;).">PHP</a>&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x4F1A;&#x4F7F;&#x7528; <a href="../GLOSSARY.html#php" class="glossary-term" title="A popular web programming language, used by many large websites such
+as Facebook. Rasmus Lerdorf originally created PHP in 1994 to power
+his personal homepage (PHP originally stood for &quot;Personal Home Page&quot;
+but now stands for &quot;PHP: Hypertext Preprocessor&quot;).">PHP</a> &#x89E3;&#x6790; index &#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x6355;&#x83B7;&#x8F93;&#x51FA;&#xFF0C;&#x628A; <a href="../GLOSSARY.html#php" class="glossary-term" title="A popular web programming language, used by many large websites such
+as Facebook. Rasmus Lerdorf originally created PHP in 1994 to power
+his personal homepage (PHP originally stood for &quot;Personal Home Page&quot;
+but now stands for &quot;PHP: Hypertext Preprocessor&quot;).">PHP</a> &#x7684;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x7ED9;&#x8BF7;&#x6C42;&#x8005;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../browser/connect/http.html" class="navigation navigation-prev " aria-label="Previous page: HTTP请求">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../browser/render/structure.html" class="navigation navigation-next " aria-label="Next page: 浏览器结构">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"web服务器","level":"4.1","depth":1,"next":{"title":"浏览器结构","level":"5.1","depth":1,"path":"browser/render/structure.adoc","ref":"browser/render/structure.adoc","articles":[]},"previous":{"title":"HTTP请求","level":"3.5","depth":1,"path":"browser/connect/http.adoc","ref":"browser/connect/http.adoc","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"server/webserver.adoc","mtime":"2017-09-10T15:45:13.908Z","type":"asciidoc"},"gitbook":{"version":"3.2.3","time":"2017-09-10T15:46:11.656Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

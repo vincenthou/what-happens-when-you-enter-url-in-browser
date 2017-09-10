@@ -1,0 +1,4 @@
+= Languages
+
+. link:zh/[Chinese]
+. link:en/[English]

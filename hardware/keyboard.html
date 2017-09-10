@@ -1,0 +1,508 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>硬件中断 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../os/event.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">硬件</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="keyboard.html">
+            
+                <a href="keyboard.html">
+            
+                    
+                    硬件中断
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">操作系统</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../os/event.html">
+            
+                <a href="../os/event.html">
+            
+                    
+                    系统事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">浏览器请求</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../browser/connect/parse-url.html">
+            
+                <a href="../browser/connect/parse-url.html">
+            
+                    
+                    解析地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../browser/connect/protocol.html">
+            
+                <a href="../browser/connect/protocol.html">
+            
+                    
+                    协议判断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../browser/connect/ip-fetch.html">
+            
+                <a href="../browser/connect/ip-fetch.html">
+            
+                    
+                    IP获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../browser/connect/https.html">
+            
+                <a href="../browser/connect/https.html">
+            
+                    
+                    TLS握手
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../browser/connect/http.html">
+            
+                <a href="../browser/connect/http.html">
+            
+                    
+                    HTTP请求
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">服务器响应</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../server/webserver.html">
+            
+                <a href="../server/webserver.html">
+            
+                    
+                    web服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">浏览器渲染</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../browser/render/structure.html">
+            
+                <a href="../browser/render/structure.html">
+            
+                    
+                    浏览器结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../browser/render/flow.html">
+            
+                <a href="../browser/render/flow.html">
+            
+                    
+                    渲染流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../browser/render/html-parse.html">
+            
+                <a href="../browser/render/html-parse.html">
+            
+                    
+                    HTML解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../browser/render/css-parse.html">
+            
+                <a href="../browser/render/css-parse.html">
+            
+                    
+                    CSS解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../browser/render/gpu.html">
+            
+                <a href="../browser/render/gpu.html">
+            
+                    
+                    GPU渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../browser/render/rerender.html">
+            
+                <a href="../browser/render/rerender.html">
+            
+                    
+                    重新渲染
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >硬件中断</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div class="sect1">
+<h2 id="__g">&#x6309;&#x4E0B;&quot;g&quot;&#x952E;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x5185;&#x5BB9;&#x4ECB;&#x7ECD;&#x4E86;&#x7269;&#x7406;&#x952E;&#x76D8;&#x548C;&#x7CFB;&#x7EDF;&#x4E2D;&#x65AD;&#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x4E00;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x5374;&#x6CA1;&#x6709;&#x6D89;&#x53CA;&#x3002;&#x5F53;&#x4F60;&#x6309;&#x4E0B;&#x201C;g&#x201D;&#x952E;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x63A5;&#x6536;&#x5230;&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;&#x81EA;&#x52A8;&#x5B8C;&#x6210;&#x673A;&#x5236;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x6839;&#x636E;&#x81EA;&#x5DF1;&#x7684;&#x7B97;&#x6CD5;&#xFF0C;&#x4EE5;&#x53CA;&#x4F60;&#x662F;&#x5426;&#x5904;&#x4E8E;&#x9690;&#x79C1;&#x6D4F;&#x89C8;&#x6A21;&#x5F0F;&#xFF0C;&#x4F1A;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5730;&#x5740;&#x6846;&#x4E0B;&#x65B9;&#x7ED9;&#x51FA;&#x8F93;&#x5165;&#x5EFA;&#x8BAE;&#x3002;&#x5927;&#x90E8;&#x5206;&#x7B97;&#x6CD5;&#x4F1A;&#x4F18;&#x5148;&#x8003;&#x8651;&#x6839;&#x636E;&#x4F60;&#x7684;&#x641C;&#x7D22;&#x5386;&#x53F2;&#x548C;&#x4E66;&#x7B7E;&#x7B49;&#x5185;&#x5BB9;&#x7ED9;&#x51FA;&#x5EFA;&#x8BAE;&#x3002;&#x4F60;&#x6253;&#x7B97;&#x8F93;&#x5165; &quot;google.com&quot;&#xFF0C;&#x56E0;&#x6B64;&#x7ED9;&#x51FA;&#x7684;&#x5EFA;&#x8BAE;&#x5E76;&#x4E0D;&#x5339;&#x914D;&#x3002;&#x4F46;&#x662F;&#x8F93;&#x5165;&#x8FC7;&#x7A0B;&#x4E2D;&#x4ECD;&#x7136;&#x6709;&#x5927;&#x91CF;&#x7684;&#x4EE3;&#x7801;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#xFF0C;&#x4F60;&#x7684;&#x6BCF;&#x4E00;&#x6B21;&#x6309;&#x952E;&#x90FD;&#x4F1A;&#x4F7F;&#x5F97;&#x7ED9;&#x51FA;&#x7684;&#x5EFA;&#x8BAE;&#x66F4;&#x52A0;&#x51C6;&#x786E;&#x3002;&#x751A;&#x81F3;&#x6709;&#x53EF;&#x80FD;&#x5728;&#x4F60;&#x8F93;&#x5165;&#x4E4B;&#x524D;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x5C06; &quot;google.com&quot; &#x5EFA;&#x8BAE;&#x7ED9;&#x4F60;&#x3002;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="__">&#x56DE;&#x8F66;&#x952E;&#x6309;&#x4E0B;</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>&#x4E3A;&#x4E86;&#x4ECE;&#x96F6;&#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x952E;&#x76D8;&#x4E0A;&#x7684;&#x56DE;&#x8F66;&#x952E;&#x88AB;&#x6309;&#x5230;&#x6700;&#x4F4E;&#x5904;&#x4F5C;&#x4E3A;&#x8D77;&#x70B9;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x65F6;&#x523B;&#xFF0C;&#x4E00;&#x4E2A;&#x4E13;&#x7528;&#x4E8E;&#x56DE;&#x8F66;&#x952E;&#x7684;&#x7535;&#x6D41;&#x56DE;&#x8DEF;&#x88AB;&#x76F4;&#x63A5;&#x5730;&#x6216;&#x8005;&#x901A;&#x8FC7;&#x7535;&#x5BB9;&#x5668;&#x95F4;&#x63A5;&#x5730;&#x95ED;&#x5408;&#x4E86;&#xFF0C;&#x4F7F;&#x5F97;&#x5C11;&#x91CF;&#x7684;&#x7535;&#x6D41;&#x8FDB;&#x5165;&#x4E86;&#x952E;&#x76D8;&#x7684;&#x903B;&#x8F91;&#x7535;&#x8DEF;&#x7CFB;&#x7EDF;&#x3002;&#x8FD9;&#x4E2A;&#x7CFB;&#x7EDF;&#x4F1A;&#x626B;&#x63CF;&#x6BCF;&#x4E2A;&#x952E;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5BF9;&#x4E8E;&#x6309;&#x952E;&#x5F00;&#x5173;&#x7684;&#x7535;&#x4F4D;&#x5F39;&#x8DF3;&#x53D8;&#x5316;&#x8FDB;&#x884C;&#x566A;&#x97F3;&#x6D88;&#x9664;(debounce)&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x8F6C;&#x5316;&#x4E3A;&#x952E;&#x76D8;&#x7801;&#x503C;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x56DE;&#x8F66;&#x7684;&#x7801;&#x503C;&#x662F;13&#x3002;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x5668;&#x5728;&#x5F97;&#x5230;&#x7801;&#x503C;&#x4E4B;&#x540E;&#xFF0C;&#x5C06;&#x5176;&#x7F16;&#x7801;&#xFF0C;&#x7528;&#x4E8E;&#x4E4B;&#x540E;&#x7684;&#x4F20;&#x8F93;&#x3002;&#x73B0;&#x5728;&#x8FD9;&#x4E2A;&#x4F20;&#x8F93;&#x8FC7;&#x7A0B;&#x51E0;&#x4E4E;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x901A;&#x7528;&#x4E32;&#x884C;&#x603B;&#x7EBF;(USB)&#x6216;&#x8005;&#x84DD;&#x7259;(Bluetooth)&#x6765;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x4EE5;&#x524D;&#x662F;&#x901A;&#x8FC7;PS/2&#x6216;&#x8005;ADB&#x8FDE;&#x63A5;&#x8FDB;&#x884C;&#x3002;</p>
+</div>
+<div class="paragraph">
+<p>USB&#x952E;&#x76D8;&#xFF1A;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>&#x952E;&#x76D8;&#x7684;USB&#x5143;&#x4EF6;&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x7684;USB&#x63A5;&#x53E3;&#x4E0E;USB&#x63A7;&#x5236;&#x5668;&#x76F8;&#x8FDE;&#x63A5;&#xFF0C;USB&#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x53F7;&#x9488;&#x4E3A;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;5V&#x7684;&#x7535;&#x538B;</p>
+</li>
+<li>
+<p>&#x952E;&#x7801;&#x503C;&#x5B58;&#x50A8;&#x5728;&#x952E;&#x76D8;&#x5185;&#x90E8;&#x7535;&#x8DEF;&#x4E00;&#x4E2A;&#x53EB;&#x505A;&quot;endpoint&quot;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x5185;</p>
+</li>
+<li>
+<p>USB&#x63A7;&#x5236;&#x5668;&#x5927;&#x6982;&#x6BCF;&#x9694;10ms&#x4FBF;&#x67E5;&#x8BE2;&#x4E00;&#x6B21;&quot;endpoint&quot;&#x4EE5;&#x5F97;&#x5230;&#x5B58;&#x50A8;&#x7684;&#x952E;&#x7801;&#x503C;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x4E2A;&#x6700;&#x77ED;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x7531;&#x952E;&#x76D8;&#x63D0;&#x4F9B;</p>
+</li>
+<li>
+<p>&#x952E;&#x503C;&#x7801;&#x503C;&#x901A;&#x8FC7;USB&#x4E32;&#x884C;&#x63A5;&#x53E3;&#x5F15;&#x64CE;&#x88AB;&#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x9075;&#x5FAA;&#x4F4E;&#x5C42;USB&#x534F;&#x8BAE;&#x7684;USB&#x6570;&#x636E;&#x5305;</p>
+</li>
+<li>
+<p>&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x5305;&#x901A;&#x8FC7;D+&#x9488;&#x6216;&#x8005;D-&#x9488;(&#x4E2D;&#x95F4;&#x7684;&#x4E24;&#x4E2A;&#x9488;)&#xFF0C;&#x4EE5;&#x6700;&#x9AD8;1.5Mb/s&#x7684;&#x901F;&#x5EA6;&#x4ECE;&#x952E;&#x76D8;&#x4F20;&#x8F93;&#x81F3;&#x8BA1;&#x7B97;&#x673A;&#x3002;&#x901F;&#x5EA6;&#x9650;&#x5236;&#x662F;&#x56E0;&#x4E3A;&#x4EBA;&#x673A;&#x4EA4;&#x4E92;&#x8BBE;&#x5907;&#x603B;&#x662F;&#x88AB;&#x58F0;&#x660E;&#x6210;&quot;&#x4F4E;&#x901F;&#x8BBE;&#x5907;&quot;&#xFF08;USB 2.0 compliance&#xFF09;</p>
+</li>
+<li>
+<p>&#x8FD9;&#x4E2A;&#x4E32;&#x884C;&#x4FE1;&#x53F7;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x7684;USB&#x63A7;&#x5236;&#x5668;&#x5904;&#x88AB;&#x89E3;&#x7801;&#xFF0C;&#x7136;&#x540E;&#x88AB;&#x4EBA;&#x673A;&#x4EA4;&#x4E92;&#x8BBE;&#x5907;&#x901A;&#x7528;&#x952E;&#x76D8;&#x9A71;&#x52A8;&#x8FDB;&#x884C;&#x8FDB;&#x4E00;&#x6B65;&#x89E3;&#x91CA;&#x3002;&#x4E4B;&#x540E;&#x6309;&#x952E;&#x7684;&#x7801;&#x503C;&#x88AB;&#x4F20;&#x8F93;&#x5230;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x786C;&#x4EF6;&#x62BD;&#x8C61;&#x5C42;</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>&#x865A;&#x62DF;&#x952E;&#x76D8;&#xFF08;&#x89E6;&#x5C4F;&#x8BBE;&#x5907;&#xFF09;&#xFF1A;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>&#x5728;&#x73B0;&#x4EE3;&#x7535;&#x5BB9;&#x5C4F;&#x4E0A;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x628A;&#x624B;&#x6307;&#x653E;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x65F6;&#xFF0C;&#x4E00;&#x5C0F;&#x90E8;&#x5206;&#x7535;&#x6D41;&#x4ECE;&#x4F20;&#x5BFC;&#x5C42;&#x7684;&#x9759;&#x7535;&#x57DF;&#x7ECF;&#x8FC7;&#x624B;&#x6307;&#x4F20;&#x5BFC;&#xFF0C;&#x5F62;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x56DE;&#x8DEF;&#xFF0C;&#x4F7F;&#x5F97;&#x5C4F;&#x5E55;&#x4E0A;&#x89E6;&#x63A7;&#x7684;&#x90A3;&#x4E00;&#x70B9;&#x7535;&#x538B;&#x4E0B;&#x964D;&#xFF0C;&#x5C4F;&#x5E55;&#x63A7;&#x5236;&#x5668;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x4E2D;&#x65AD;&#xFF0C;&#x62A5;&#x544A;&#x8FD9;&#x6B21;&#x201C;&#x70B9;&#x51FB;&#x201D;&#x7684;&#x5750;&#x6807;</p>
+</li>
+<li>
+<p>&#x7136;&#x540E;&#x79FB;&#x52A8;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x901A;&#x77E5;&#x5F53;&#x524D;&#x6D3B;&#x8DC3;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x70B9;&#x51FB;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#x5728;&#x5B83;&#x7684;&#x67D0;&#x4E2A;GUI&#x90E8;&#x4EF6;&#x4E0A;&#x4E86;&#xFF0C;&#x73B0;&#x5728;&#x8FD9;&#x4E2A;&#x90E8;&#x4EF6;&#x662F;&#x865A;&#x62DF;&#x952E;&#x76D8;&#x7684;&#x6309;&#x94AE;</p>
+</li>
+<li>
+<p>&#x865A;&#x62DF;&#x952E;&#x76D8;&#x5F15;&#x53D1;&#x4E00;&#x4E2A;&#x8F6F;&#x4E2D;&#x65AD;&#xFF0C;&#x8FD4;&#x56DE;&#x7ED9;OS&#x4E00;&#x4E2A;&#x201C;&#x6309;&#x952E;&#x6309;&#x4E0B;&#x201D;&#x6D88;&#x606F;</p>
+</li>
+<li>
+<p>&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x53C8;&#x8FD4;&#x56DE;&#x6765;&#x5411;&#x5F53;&#x524D;&#x6D3B;&#x8DC3;&#x7684;&#x5E94;&#x7528;&#x901A;&#x77E5;&#x4E00;&#x4E2A;&#x201C;&#x6309;&#x952E;&#x6309;&#x4E0B;&#x201D;&#x4E8B;&#x4EF6;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="__usb">&#x4EA7;&#x751F;&#x4E2D;&#x65AD;[&#x975E;USB&#x952E;&#x76D8;]</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>&#x952E;&#x76D8;&#x5728;&#x5B83;&#x7684;&#x4E2D;&#x65AD;&#x8BF7;&#x6C42;&#x7EBF;(IRQ)&#x4E0A;&#x53D1;&#x9001;&#x4FE1;&#x53F7;&#xFF0C;&#x4FE1;&#x53F7;&#x4F1A;&#x88AB;&#x4E2D;&#x65AD;&#x63A7;&#x5236;&#x5668;&#x6620;&#x5C04;&#x5230;&#x4E00;&#x4E2A;&#x4E2D;&#x65AD;&#x5411;&#x91CF;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6574;&#x578B;&#x6570; &#x3002;CPU&#x4F7F;&#x7528;&#x4E2D;&#x65AD;&#x63CF;&#x8FF0;&#x7B26;&#x8868;(IDT)&#x628A;&#x4E2D;&#x65AD;&#x5411;&#x91CF;&#x6620;&#x5C04;&#x5230;&#x5BF9;&#x5E94;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E9B;&#x51FD;&#x6570;&#x88AB;&#x79F0;&#x4E3A;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x5B83;&#x4EEC;&#x7531;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x63D0;&#x4F9B;&#x3002;&#x5F53;&#x4E00;&#x4E2A;&#x4E2D;&#x65AD;&#x5230;&#x8FBE;&#x65F6;&#xFF0C;CPU&#x6839;&#x636E;IDT&#x548C;&#x4E2D;&#x65AD;&#x5411;&#x91CF;&#x7D22;&#x5F15;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x51FA;&#x573A;&#x4E86;&#x3002;</p>
+</div>
+</div>
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../os/event.html" class="navigation navigation-next " aria-label="Next page: 系统事件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"硬件中断","level":"1.2","depth":1,"next":{"title":"系统事件","level":"2.1","depth":1,"path":"os/event.adoc","ref":"os/event.adoc","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"hardware/keyboard.adoc","mtime":"2017-09-10T15:45:13.908Z","type":"asciidoc"},"gitbook":{"version":"3.2.3","time":"2017-09-10T15:46:11.656Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
