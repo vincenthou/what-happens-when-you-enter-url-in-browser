@@ -1,22 +1,17 @@
 = 目录
 
-== 硬件
+. link:README.md[说明]
+. link:introduction.adoc[介绍]
 . link:hardware/keyboard.adoc[硬件中断]
-
-== 操作系统
-. link:os/event.adoc[系统事件]
-
-== 浏览器请求
+. link:os/event.adoc[操作系统系统事件]
+. link:browser/connect/connect.adoc[浏览器请求]
 .. link:browser/connect/parse-url.adoc[解析地址]
 .. link:browser/connect/protocol.adoc[协议判断]
 .. link:browser/connect/ip-fetch.adoc[IP获取]
 .. link:browser/connect/https.adoc[TLS握手]
 .. link:browser/connect/http.adoc[HTTP请求]
-
-== 服务器响应
-.. link:server/webserver.adoc[web服务器]
-
-== 浏览器渲染
+. link:server/webserver.adoc[web服务器]
+. link:browser/render/render.adoc[浏览器渲染]
 .. link:browser/render/structure.adoc[浏览器结构]
 .. link:browser/render/flow.adoc[渲染流程]
 .. link:browser/render/html-parse.adoc[HTML解析]
